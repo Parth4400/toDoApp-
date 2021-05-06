@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+    
+{% block content %}
+
+
+<h1>signup</h1>
+
+<!-- 
+    {{ form.as_ul }} -->
+   <div class=" col-lg-5 shadow p-0  mx-auto">
+    <div class="alert alert-success">
+        <h2>Create Account</h2>
+    </div>
+    <div class="p-4">
+        <form action="/signup/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <hr>
+            <input class="btn btn-success" type="submit" value="Create Account">
+            </form>
+    </div>
+</div>
+
+
+        
+{% endblock %}
